@@ -8,21 +8,22 @@ const colors = [
 
 ];
 
-textzone= document.getElementById('text')
-
+const textzone = document.getElementById('text');
+const authorzone = document.getElementById('author');
+const quoteBox = document.getElementById('quote-box');
 
 document.getElementById('new-quote').addEventListener('click', function() {
-    
+
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
 
     document.body.style.backgroundColor = randomColor.background;
     
-    document.getElementById('quote-box').style.backgroundColor = randomColor.text;
-    document.getElementById('quote-box').style.color = randomColor.background;
-    
-    textzone.innerHTML = "Le texte a été changé !";
+    quoteBox.style.backgroundColor = randomColor.text;
+    quoteBox.style.color = randomColor.text;
 
+    textzone.querySelector('p').style.color = randomColor.background;
+    authorzone.querySelector('p').style.color = randomColor.background;
 
     this.style.backgroundColor = randomColor.button;
-    this.style.color = '#ffffff';
+    this.style.color = '#ffffff'; 
 });
