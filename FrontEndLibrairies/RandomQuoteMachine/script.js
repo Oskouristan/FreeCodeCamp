@@ -8,6 +8,9 @@ const colors = [
 
 ];
 
+textzone= document.getElementById('text')
+
+
 document.getElementById('new-quote').addEventListener('click', function() {
     
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
@@ -17,6 +20,9 @@ document.getElementById('new-quote').addEventListener('click', function() {
     document.getElementById('quote-box').style.backgroundColor = randomColor.text;
     document.getElementById('quote-box').style.color = randomColor.background;
     
+    textzone.innerHTML = "Le texte a été changé !";
+
+
     this.style.backgroundColor = randomColor.button;
     this.style.color = '#ffffff';
 });
