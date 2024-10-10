@@ -50,7 +50,6 @@ const tumblrButton = document.getElementById('tumblr-quote');
 const newQuoteButton = document.getElementById('new-quote');
 
 
-
 function randomQuotes() {
 
     const randomIndex = Math.floor(Math.random() * quotesList.length);
@@ -84,9 +83,12 @@ function changinColor(){
 function whenClicked() {
     randomQuotes();
     changinColor(); 
+
+    tweetButton.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(currentQuote)} - ${encodeURIComponent(currentAuthor)}`;
 }
 
 
 newQuoteButton.addEventListener('click', whenClicked);
 
 whenClicked();
+
