@@ -1,3 +1,5 @@
+//one day maybe i'll use JSON 
+
 const colors = [
 
     { background: '#ffcccb', text: '#000000', button: '#f8d7da' },
@@ -28,7 +30,6 @@ const quotesList = [
     ["Discipline is doing what you hate to do but nonetheless doing it like you love it.", "Mike Tyson"],
     ["Sometimes you gotta run before you can walk.", "Tony Stark"],
     ["It's not who I am underneath, but what I do that defines me.", "Batman"],
-    ["I can't be the only one who wants to punch Billy Joel in the face.", "Billy Butcher"],
     ["Spartans, Prepare for glory", "Leonidas"],
     ["Tonight we dine in hell!", "Leonidas"],
     ["Just because someone stumbles and loses their path, doesn't mean they're lost forever", "Charles Xavier (Logan)"],
@@ -36,8 +37,8 @@ const quotesList = [
     ["When something is important enough, you do it even if the odds are not in your favor.", "Elon Musk"],
     ["All we have to decide is what to do with the time that is given to us","Gandalf"],
     ["English Motherf*****, do you speak it!?","Samuel L. Jackson's"],
-    ["Why so serious?","Joker"]
-
+    ["Why so serious?","Joker"],
+    ["What is real? How do you define 'real'? If you're talking about what you can feel, what you can smell, what you can taste and see, then 'real' is simply electrical signals interpreted by your brain.","Morpheus"]
   ];
   
 
@@ -55,36 +56,38 @@ function randomQuotes() {
     const randomIndex = Math.floor(Math.random() * quotesList.length);
     const randomQuote = quotesList[randomIndex];
 
-    textzone.textContent = "''" + randomQuote[0];   
+    textzone.textContent = "''" + randomQuote[0];
     authorzone.textContent = "- " + randomQuote[1];
-    }
 
+    return randomQuote;
+}
 
+// Fonction pour changer la couleur de fond et des éléments
 function changinColor(){
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     document.body.style.backgroundColor = randomColor.background;
 
-    
+
     quoteBox.style.backgroundColor = randomColor.text;
     quoteBox.style.color = randomColor.text;
     textzone.style.color = randomColor.background;
     authorzone.style.color = randomColor.background;
-    
+
 
 
     tweetButton.style.backgroundColor = randomColor.button;
     tumblrButton.style.backgroundColor = randomColor.button;
-    
+
     newQuoteButton.style.backgroundColor = randomColor.button;
     newQuoteButton.style.setProperty("color", "#ffffff", "important");
 
 }
 
 function whenClicked() {
-    randomQuotes();
+    const randomQuote = randomQuotes(); // Appel à la fonction pour obtenir une nouvelle citation
     changinColor(); 
 
-    tweetButton.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(currentQuote)} - ${encodeURIComponent(currentAuthor)}`;
+    tweetButton.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(randomQuote[0])} - ${encodeURIComponent(randomQuote[1])}`;
 }
 
 
