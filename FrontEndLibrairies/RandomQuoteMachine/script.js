@@ -1,4 +1,4 @@
-/*const colors = [
+const colors = [
 
     { background: '#ffcccb', text: '#000000', button: '#f8d7da' },
     { background: '#ffe4b5', text: '#000000', button: '#fff3cd' },
@@ -7,7 +7,7 @@
     { background: '#e6e6fa', text: '#000000', button: '#d1ecf1' }
 
 ];
-*/
+
 
 const quotesList = [
     ["The only limit to our realization of tomorrow is our doubts of today.", "Franklin D. Roosevelt"],
@@ -63,34 +63,30 @@ function randomQuotes() {
 
 function changinColor(){
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    
     document.body.style.backgroundColor = randomColor.background;
 
+    
     quoteBox.style.backgroundColor = randomColor.text;
     quoteBox.style.color = randomColor.text;
-
     textzone.style.color = randomColor.background;
     authorzone.style.color = randomColor.background;
+    
 
-    // Forcing the button's color change using !important
-    newQuoteButton.style.setProperty("background-color", randomColor.button, "important");
-    newQuoteButton.style.setProperty("color", "#ffffff", "important"); // Button text color
+
+    tweetButton.style.backgroundColor = randomColor.button;
+    tumblrButton.style.backgroundColor = randomColor.button;
+    
+    newQuoteButton.style.backgroundColor = randomColor.button;
+    newQuoteButton.style.setProperty("color", "#ffffff", "important");
+
 }
 
-newQuoteButton.addEventListener('click', function() {
+function whenClicked() {
     randomQuotes();
+    changinColor(); 
+}
 
-    let randomColor = colors[Math.floor(Math.random() * colors.length)];
 
-    document.body.style.backgroundColor = randomColor.background;
+newQuoteButton.addEventListener('click', whenClicked);
 
-    quoteBox.style.backgroundColor = randomColor.text;
-    quoteBox.style.color = randomColor.text;
-
-    textzone.style.color = randomColor.background;
-    authorzone.style.color = randomColor.background;
-
-    // Appliquer les couleurs au bouton
-    newQuoteButton.style.backgroundColor = randomColor.button;
-    newQuoteButton.style.color = '#ffffff';
-});
+whenClicked();
