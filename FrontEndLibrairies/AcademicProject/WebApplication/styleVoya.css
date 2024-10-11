@@ -1,0 +1,28 @@
+/*styleVoya.css*/
+
+.main_voya{
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(images/bus.jpg);
+}
+
+.voyage{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 100px;
+    background: transparent;
+}
+
+.voyage>p{
+    max-width: 75%;
+    justify-content: center;
+    text-align: justify;
+    font-size: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 50px;
+    background-color: #f4f4f6;
+    border: 2px solid black;
+    border-radius: 25px;
+}

@@ -1,0 +1,54 @@
+/*styleInfo.css*/
+
+.main_info{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background: #f4f4f6;
+
+}
+.main_info>p{
+    max-width: 75%;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 50px;
+    background-color: #f4f4f6;
+}
+
+.text-tarif>p{
+    max-width: 75%;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    padding: 50px;
+
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.info-tarif{
+    display: flex;
+    background: #dee8e2;
+    border-top: 1px solid black;
+}
+.image-tarif{
+    max-width: 60%;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.text-tarif{
+    max-width: 40%;
+    justify-content: flex-end;
+}
+li{
+    max-width: 75%;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    padding: 20px;
+}
