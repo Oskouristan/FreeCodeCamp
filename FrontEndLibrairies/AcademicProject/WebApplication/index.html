@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <title>Voyage 3ème Année</title>
@@ -7,69 +8,67 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 </head>
 
-
 <body>
+    <header>
+        <div class="row align-items-center justify-content-between w-100 py-3 bg-light border-bottom">
+            <div class="col-auto">
+                <a href="index.html"><img src="images/logo.png" alt="logo AVSQ" height="165" width="310" /></a>
+            </div>
+            <nav class="col d-flex justify-content-around">
+                <a href="voya.html" class="text-center text-dark font-weight-bold h3 transition-hover">voyage.</a>
+                <a href="plan.html" class="text-center text-dark font-weight-bold h3 transition-hover">planning.</a>
+                <a href="info.html" class="text-center text-dark font-weight-bold h3 transition-hover">info.</a>
+            </nav>
+        </div>
+    </header>
 
-<header>
+    <div class="main_index">
+        <div class="welcome d-flex flex-column justify-content-center align-items-center vh-50">
+            <div class="welcome-title h3 border-top border-bottom py-2 px-4 bg-light">
+                Accueil
+            </div>
+            <div class="welcome-message text-center">
+                Bienvenue sur le site de l'AVSQ ! Vous trouverez sur ce site toutes les informations concernant votre <strong>Voyage à Nice.</strong>
+                <br>Vous pourrez accéder aux informations concernant votre voyage <a href="voya.html" class="fw-bold">ICI</a>
+            </div>
+            <div class="reservation">
+                <a class="btn btn-primary btn-lg" href="https://www.lego.com/">Accédez à votre réservation maintenant !</a>
+            </div>
+        </div>
 
-    <div class="row align-items-center justify-content-between w-100 py-3">
-        <div class="col-auto">
-            <a href="index.html"><img src="images/logo.png" alt="logo AVSQ" height="165" width="310" /></a>
+        <div class="index-1 container-fluid bg-light">
+            <img class="img-fluid" src="images/image1.jpg" alt="">
         </div>
-        <nav class="col d-flex justify-content-around">
-            <a href="voya.html" class="text-center text-dark font-weight-bold h3 transition-hover">voyage.</a>
-            <a href="plan.html" class="text-center text-dark font-weight-bold h3 transition-hover">planning.</a>
-            <a href="info.html" class="text-center text-dark font-weight-bold h3 transition-hover">info.</a>
-        </nav>
-    </div>
-    
-    
-</header>
 
-<div class="main_index">
-
-    <div class="welcome d-flex flex-column justify-content-evenly align-items-center vh-50">
-        <div class="welcome-title h3 border-top border-bottom py-2 px-4">
-            Accueil
-        </div>
-        <div class="welcome-message text-center">
-            Bienvenue sur le site de l'AVSQ ! Vous trouverez sur ce site toutes les informations concernant votre <strong>Voyage à Nice.</strong>
-    
-            <br>Vous pourrez accéder aux informations concernant votre voyage <a href="voya.html" class="fw-bold">ICI</a>
-        </div>
-        <div class="reservation">
-            <a class="btn btn-primary btn-lg" href="https://www.lego.com/">Accédez à votre réservation maintenant !</a>
-        </div>
-    </div>
-    
-    
-    
-    <div class="index-1">
-        <img class="image-i1" src="images/image1.jpg" alt="">
-        <div class="image-desc">
-            Votre réservation prends en compte le petit déjeuner</div>
-    </div>
-    <div class="index-2">
-        <div class="image-index2">
-            <img src="images/image2.jpg" alt="paysage" width="100%" height="100%">
-        </div>
-        <div class="aside-index2">
-            <h2>Vous découvrirez un décor inoubliable</h2>
+        <div class="index-2 d-flex flex-row-reverse border-top">
+            <div class="image-index2 col-md-6">
+                <img src="images/image2.jpg" alt="paysage" class="img-fluid">
+            </div>
+            <div class="aside-index2 col-md-6 d-flex align-items-center">
+                <h2 class="text-center">Vous découvrirez un décor inoubliable</h2>
+            </div>
         </div>
     </div>
-</div>
 
+    <div id="footer"></div>
+    
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(error => console.error('Erreur lors du chargement du footer:', error));
+    </script>
 
-<div class="div-footer">
-    <footer>
-        <h1>L'aventure vous appelle.</h1>
-    </footer>
-</div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
