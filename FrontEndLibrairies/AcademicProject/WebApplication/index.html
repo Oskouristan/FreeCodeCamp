@@ -7,52 +7,49 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
 </head>
+
 
 <body>
 
 <header>
 
-    <div class="image-header">
-        <a href="index.html"><img src="images/logo.png" alt="logo AVSQ" height="165" width="310" alt="logo AVSQ"/></a>
+    <div class="row align-items-center justify-content-between w-100 py-3">
+        <div class="col-auto">
+            <a href="index.html"><img src="images/logo.png" alt="logo AVSQ" height="165" width="310" /></a>
+        </div>
+        <nav class="col d-flex justify-content-around">
+            <a href="voya.html" class="text-center text-dark font-weight-bold h3 transition-hover">voyage.</a>
+            <a href="plan.html" class="text-center text-dark font-weight-bold h3 transition-hover">planning.</a>
+            <a href="info.html" class="text-center text-dark font-weight-bold h3 transition-hover">info.</a>
+        </nav>
     </div>
-    <nav>
-
-        <a href="voya.html"><h3>voyage.</h3></a>
-        <a href="plan.html"><h3>planning.</h3></a>
-        <a href="info.html"><h3>info.</h3></a>
-    </nav>
+    
+    
 </header>
 
 <div class="main_index">
 
-    <div class="welcome">
-        <div class="welcome-title">Accueil</div>
-        <div class="welcome-message">
+    <div class="welcome d-flex flex-column justify-content-evenly align-items-center vh-50">
+        <div class="welcome-title h3 border-top border-bottom py-2 px-4">
+            Accueil
+        </div>
+        <div class="welcome-message text-center">
             Bienvenue sur le site de l'AVSQ ! Vous trouverez sur ce site toutes les informations concernant votre <strong>Voyage à Nice.</strong>
-
-
-
-            <br>Vous pourrez acceder aux informations concernant votre voyage <a href="voya.html">ICI</a>
+    
+            <br>Vous pourrez accéder aux informations concernant votre voyage <a href="voya.html" class="fw-bold">ICI</a>
         </div>
         <div class="reservation">
-            <a class="reservation-button" href="https://www.booking.com/hotel/fr/hoteldubaou.fr.html?aid=301664&label=la-gaude-
-            0ZBUD7rs1MTMVCNIafQY3wS261725466136%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-2917423600%3Alp9040872%3Ali
-            %3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YSNxgVPQVI7AMnn1KDvPMRs&sid=a2377f6c10d8bbe755adaba3b0be1cdd&all_sr_bl
-            ocks=22431114_351323452_0_2_0%2C22431106_351323452_0_2_0%2C22431106_351323452_0_2_0%2C22431110_351323452_0_2_0%2
-            C22431110_351323452_0_2_0%2C22431113_351323452_0_2_0%2C52896_351323452_0_2_0%2C52896_351323452_0_2_0%2C52896_351
-            323452_0_2_0;checkin=2023-04-20;checkout=2023-04-27;dest_id=-1436238;dest_type=city;dist=0;group_adults=26;group
-            _children=0;hapos=1;highlighted_blocks=22431114_351323452_0_2_0%2C22431106_351323452_0_2_0%2C22431106_351323452_
-            0_2_0%2C22431110_351323452_0_2_0%2C22431110_351323452_0_2_0%2C22431113_351323452_0_2_0%2C52896_351323452_0_2_0%2
-            C52896_351323452_0_2_0%2C52896_351323452_0_2_0;hpos=1;matching_block_id=22431114_351323452_0_2_0;no_rooms=11;req
-            _adults=26;req_children=0;room1=A%2CA;room10=A%2CA%2CA;room11=A%2CA%2CA;room2=A%2CA;room3=A%2CA;room4=A%2CA;room
-            5=A%2CA;room6=A%2CA;room7=A%2CA;room8=A%2CA%2CA;room9=A%2CA%2CA;sb_price_type=total;sr_order=popularity;sr_pri_b
-            locks=22431114_351323452_0_2_0__67993%2C22431106_351323452_0_2_0__61290%2C22431106_351323452_0_2_0__61290%2C2243
-            1110_351323452_0_2_0__34885%2C22431110_351323452_0_2_0__34885%2C22431113_351323452_0_2_0__54023%2C52896_35132345
-            2_0_2_0__41102%2C52896_351323452_0_2_0__41102%2C52896_351323452_0_2_0__41102;srepoch=1669192579;srpvid=99e23c807
-            47d025a;type=total;ucfs=1&#hotelTmpl">Accédez à votre réservation maintenant !</a>
+            <a class="btn btn-primary btn-lg" href="https://www.lego.com/">Accédez à votre réservation maintenant !</a>
         </div>
     </div>
+    
+    
+    
     <div class="index-1">
         <img class="image-i1" src="images/image1.jpg" alt="">
         <div class="image-desc">
@@ -68,10 +65,10 @@
     </div>
 </div>
 
+
 <div class="div-footer">
     <footer>
         <h1>L'aventure vous appelle.</h1>
-
     </footer>
 </div>
 </body>
