@@ -3,52 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Voyage 3ème Année</title>
-    <link href="style.css" type="text/css" rel="stylesheet">
     <link href="styleVoya.css" type="text/css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+
 </head>
 
 <body id="bodyVoya">
 
-<header>
-    <div class="image-header">
-        <a href="index.html"><img src="images/logo.png" height="165" width="310" alt="logo AVSQ"/></a>
-    </div>
-    <nav>
+<div id="header"></div>
 
-        <a href="#voya"><h3>voyage.</h3></a>
-        <a href="plan.html"><h3>planning.</h3></a>
-        <a href="info.html"><h3>info.</h3></a>
-    </nav>
-</header>
+<div class="container my-5">
+    <h2 class="text-center mb-4 text-primary-custom">Voyage</h2>
 
-<div class="main_voya">
-    <dd id="voya"></dd>
-    <h2>voyage</h2>
-    <div class="voyage">
-        <p>
-            Votre voyage débutera le jeudi 20 avril à 6h au campus de l'IUT velizy. Un long voyage rempli d'aventure
-            vous attends. Pendant 10h30 vous observerez le paysage de la France. Pour ce voyage nous vous remercions de
-            vous munir d'un pic-nique, d'une bouteille d'eau et nous vous recommandons de prendre de quoi vous occuper
-            pendant ce trajet. Ce trajet en car est le moyen le plus écologique de se rendre à Nice et donc d'entretenir
-            un superbe paysage et la bonne santé de notre planète. Votre arrivée à l'hotel est prévue aux alentours de
-            17h30.
-
-            Le départ du retour se fera à 13h30 et votre arrivée à Vélizy est prévue pour 00h. Vous pourrez profiter une
-            derniere fois de Nice le matin.
-        </p>
-        
-        <p>
-            Nous vous informons que le trajet de l'hotel jusqu'au centre de Nice est de 30min.
-        </p>
+    <div class="main_voya p-4 rounded shadow" style="background-image: url(images/bus.jpg); background-size: cover;">
+        <div class="voyage p-4 rounded">
+            <p>
+                Votre voyage débutera le jeudi 20 avril à 6h au campus de l'IUT Vélizy. Un long voyage rempli d'aventure vous attend. Pendant 10h30, vous observerez le paysage de la France. Pour ce voyage, nous vous remercions de vous munir d'un pic-nique, d'une bouteille d'eau, et nous vous recommandons de prendre de quoi vous occuper pendant ce trajet. Ce trajet en car est le moyen le plus écologique de se rendre à Nice et donc d'entretenir un superbe paysage et la bonne santé de notre planète. Votre arrivée à l'hôtel est prévue aux alentours de 17h30.
+            </p>
+            <p>
+                Le départ du retour se fera à 13h30 et votre arrivée à Vélizy est prévue pour 00h. Vous pourrez profiter une dernière fois de Nice le matin.
+            </p>
+            <p>
+                Nous vous informons que le trajet de l'hôtel jusqu'au centre de Nice est de 30min.
+            </p>
+        </div>
     </div>
 </div>
-<div class="div-footer">
-    <footer>
-        <p>L'aventure vous appelle.</p>
-    </footer>
-</div>
+
+<div id="footer"></div>
+
+<script src="scripts/headerAndFooter.js"></script>
 </body>
 </html>

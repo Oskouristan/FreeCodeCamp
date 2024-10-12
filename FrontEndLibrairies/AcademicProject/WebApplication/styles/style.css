@@ -1,6 +1,58 @@
+/* Récapitulatif des Couleurs du Site
+
+Couleur principale : Gris anthracite (#343a40)
+Couleur secondaire : Bleu foncé (#004085)
+Accent : Argenté (#C0C0C0)
+Couleur de fond : Clair (#f8f9fa)
+Couleur du texte : Blanc (#ffffff)
+*/
+
+/*Apple Style
+.linkuri {
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+*/
+
+.linkuri {
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff; /* Couleur de texte par défaut : blanc */
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Transition douce pour les changements de couleur */
+    position: relative;
+}
+
+.linkuri:hover {
+    color: #C0C0C0; /* Couleur bleu foncé lors du survol */
+}
+
+.linkuri:focus, .linkuri:active {
+    color: #C0C0C0; /* Couleur argentée pour lien actif ou en focus */
+}
+
+.linkuri::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Ajuste la distance de la ligne sous le texte */
+    width: 100%;
+    height: 2px;
+    background-color: transparent; /* Ligne invisible par défaut */
+    transition: background-color 0.3s ease;
+}
+
+.linkuri:hover::after {
+    background-color: #004085; /* Ligne bleu foncé au survol */
+}
+
+
+
+
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #f8f9fa; /* Fond clair pour contraster avec les éléments sombres */
+    background-color: #f8f9fa; 
 }
 
 h2 {
@@ -8,18 +60,60 @@ h2 {
 }
 
 .bg-anthracite {
-    background-color: #343a40 !important; /* Gris anthracite pour rester dans la palette */
+    background-color: #343a40 !important; 
 }
 
 .text-primary-custom {
-    color: #004085 !important; /* Bleu personnalisé */
+    color: #004085 !important; 
 }
 
 .table-hover tbody tr:hover {
-    background-color: rgba(0, 64, 133, 0.1); /* Effet au survol */
+    background-color: rgba(0, 64, 133, 0.1);
 }
 
 .card {
-    border: 1px solid #c0c0c0; /* Bordure argentée pour les cards */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    border: 1px solid #c0c0c0; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main_voya {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    position: relative;
+}
+
+.voyage {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 100px;
+}
+
+/* Ajout d'un fond semi-transparent pour le texte */
+.voyage > p {
+    max-width: 100%;
+    text-align: justify;
+    font-size: 20px;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc semi-transparent */
+    color: #004085; /* Texte bleu conforme à la couleur secondaire */
+    border: 2px solid #004085; /* Bordure bleu foncé */
+    border-radius: 25px;
+    backdrop-filter: blur(0px); /* Flou derrière pour lisibilité */
+    transition: box-shadow 0.3s ease;
+}
+
+.voyage > p:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+}
+
+/* Ajustement pour les écrans plus petits */
+@media (max-width: 768px) {
+    .voyage > p {
+        font-size: 18px; /* Réduction de la taille de police sur les petits écrans */
+        padding: 15px; /* Réduction de l'espacement sur mobile */
+    }
 }
