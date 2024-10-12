@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Voyage 3ème Année</title>
-    <link href="style.css" type="text/css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
@@ -16,32 +15,37 @@
     <div id="header"></div>
 
     <div class="main_index container mt-5">
-        <div class="welcome text-center bg-light p-4 rounded">
-            <h1 class="welcome-title h3 border-top border-bottom py-2 mb-4">Accueil</h1>
-            <p class="welcome-message">
+        <div class="text-center bg-light p-4 rounded">
+            <h1 class="h3 border-top border-bottom py-2 mb-4">Accueil</h1>
+            <p>
                 Bienvenue sur le site de l'AVSQ ! Vous trouverez sur ce site toutes les informations concernant votre <strong>Voyage à Nice.</strong>
-                <br>Vous pourrez accéder aux informations concernant votre voyage <a href="voya.html" class="fw-bold">ICI</a>.
+                <br>Vous pourrez accéder aux informations concernant votre voyage 
+                <a href="voya.html" class="fw-bold custom-link">ICI</a>.
             </p>
-            <a class="btn btn-primary btn-lg mt-3" href="https://www.lego.com/">Accédez à votre réservation maintenant !</a>
+            <a class="my-button" href="https://www.lego.com/">Accédez à votre réservation maintenant !</a>
         </div>
-
+        
+        
         <div class="index-1 my-5">
             <img class="img-fluid rounded" src="images/image1.jpg" alt="Bandeau d'image">
         </div>
 
-        <div class="index-2 row mt-5 border-top">
-            <div class="image-index2 col-md-6">
-                <img src="images/image2.jpg" alt="Paysage" class="img-fluid rounded">
+        <div class="index-2 container mt-5 border-top rounded">
+            <div class="row">
+                <div class="image-index2 col-md-6 pl-0">
+                    <img src="images/image2.jpg" alt="Paysage" class="img-fluid rounded">
+                </div>
+                <div class="aside-index2 col-md-6 d-flex align-items-center">
+                    <h2 class="text-center">Vous découvrirez un décor inoubliable</h2>
+                </div>
             </div>
-            <div class="aside-index2 col-md-6 d-flex align-items-center">
-                <h2 class="text-center">Vous découvrirez un décor inoubliable</h2>
-            </div>
-        </div>
+        </div>        
     </div>
 
     <div id="footer"></div>
 
     <script src="scripts/headerAndFooter.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
