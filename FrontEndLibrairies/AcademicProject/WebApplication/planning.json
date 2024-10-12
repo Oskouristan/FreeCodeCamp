@@ -1,0 +1,80 @@
+{
+    "days": [
+      {
+        "day": "Jeudi",
+        "date": "20/04",
+        "schedule": [
+          {"time": "18h - 19h", "event": "Repos à l’hôtel"},
+          {"time": "19h - 20h30", "event": "Dîner au <a href='https://www.koudouresto.com' target='_blank' class='text-primary-custom'>Le Koudou</a>"},
+          {"time": "21h - 21h30", "event": "Retour à l’hôtel"},
+          {"time": "21h30 - 22h30", "event": "Jeu de Loup Garou"}
+        ]
+      },
+      {
+        "day": "Vendredi",
+        "date": "21/04",
+        "schedule": [
+          {"time": "8h - 9h", "event": "Petit Déjeuner"},
+          {"time": "10h", "event": "Visite à l’IUT de Nice"},
+          {"time": "12h - 16h30", "event": "Pause déjeuner et suite de la visite"},
+          {"time": "16h30 - 18h", "event": "Temps libre dans le centre de Nice"}
+        ]
+      },
+      {
+        "day": "Samedi",
+        "date": "22/04",
+        "schedule": [
+          {"time": "8h - 9h", "event": "Petit Déjeuner"},
+          {"time": "10h - 12h", "event": "Visite du Mont Goron"},
+          {"time": "12h - 13h30", "event": "Pause déjeuner"},
+          {"time": "14h - 16h", "event": "Visite des grottes de Lzarets"}
+        ]
+      },
+      {
+        "day": "Dimanche",
+        "date": "23/04",
+        "schedule": [
+          {"time": "8h - 10h", "event": "Petit Déjeuner"},
+          {"time": "12h", "event": "Dîner au restaurant Le Galet"},
+          {"time": "18h", "event": "Retour à l’hôtel"},
+          {"time": "20h", "event": "Dîner au Sunset Resto"}
+        ]
+      },
+      {
+        "day": "Lundi",
+        "date": "24/04",
+        "schedule": [
+          {"time": "8h - 9h", "event": "Petit Déjeuner"},
+          {"time": "10h - 12h", "event": "Visite de PME Invest"},
+          {"time": "12h30", "event": "Déjeuner"}
+        ]
+      },
+      {
+        "day": "Mardi",
+        "date": "25/04",
+        "schedule": [
+          {"time": "8h - 9h", "event": "Petit Déjeuner"},
+          {"time": "9h30", "event": "Randonnée au Verdon"},
+          {"time": "18h", "event": "Retour à l’hôtel"}
+        ]
+      },
+      {
+        "day": "Mercredi",
+        "date": "26/04",
+        "schedule": [
+          {"time": "8h - 9h", "event": "Petit Déjeuner"},
+          {"time": "9h30", "event": "Visite de la verrerie de Nice"},
+          {"time": "12h - 13h30", "event": "Déjeuner à La Cucina"}
+        ]
+      },
+      {
+        "day": "Jeudi",
+        "date": "27/04",
+        "schedule": [
+          {"time": "8h - 10h", "event": "Petit Déjeuner"},
+          {"time": "11h", "event": "Visite libre"}
+        ]
+      }
+    ]
+  }
+  
