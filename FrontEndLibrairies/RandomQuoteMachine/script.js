@@ -43,6 +43,7 @@ function changinColor() {
 }
 
 function whenClicked() {
+    console.log("Button clicked!");
     newQuoteButton.classList.add('animated');
 
     const randomQuote = randomQuotes();
