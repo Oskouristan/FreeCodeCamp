@@ -1,12 +1,20 @@
 {
-    "colors": [
-      { "background": "#ffcccb", "text": "#000000", "button": "#f8d7da" },
-      { "background": "#ffe4b5", "text": "#000000", "button": "#fff3cd" },
-      { "background": "#d3f8d3", "text": "#000000", "button": "#c3e6cb" },
-      { "background": "#add8e6", "text": "#000000", "button": "#b8daff" },
-      { "background": "#e6e6fa", "text": "#000000", "button": "#d1ecf1" }
-    ],
-    "quotes": [
+  "colors": [
+      { "background": "#ffcccb", "text": "#d9a6a6" },
+      { "background": "#ffe4b5", "text": "#d9c68c" },
+      { "background": "#d3f8d3", "text": "#a2d3a2" },
+      { "background": "#add8e6", "text": "#99c0d6" },
+      { "background": "#e6e6fa", "text": "#c9c9e6" },
+      { "background": "#f0e68c", "text": "#d9d34d" },
+      { "background": "#ffe4e1", "text": "#d9a6a1" },
+      { "background": "#e0bbff", "text": "#c59cff" },
+      { "background": "#c1f0c1", "text": "#a5d3a5" },
+      { "background": "#b0e0e6", "text": "#98c6c9" },
+      { "background": "#fffacd", "text": "#e3d6a2" },
+      { "background": "#ffdab9", "text": "#d9b18c" },
+      { "background": "#ffe5b4", "text": "#e2c59a" }
+  ],
+  "quotes": [
       ["The only limit to our realization of tomorrow is our doubts of today.", "Franklin D. Roosevelt"],
       ["In the end, we will remember not the words of our enemies, but the silence of our friends.", "Martin Luther King Jr."],
       ["The greatest glory in living lies not in never falling, but in rising every time we fall.", "Nelson Mandela"],
@@ -23,14 +31,33 @@
       ["Discipline is doing what you hate to do but nonetheless doing it like you love it.", "Mike Tyson"],
       ["Sometimes you gotta run before you can walk.", "Tony Stark"],
       ["It's not who I am underneath, but what I do that defines me.", "Batman"],
-      ["I can't be the only one who wants to punch Billy Joel in the face.", "Billy Butcher"],
       ["Spartans, Prepare for glory", "Leonidas"],
       ["Tonight we dine in hell!", "Leonidas"],
       ["Just because someone stumbles and loses their path, doesn't mean they're lost forever", "Charles Xavier (Logan)"],
       ["Let he who is without sin cast the first stone.", "Jesus Christ"],
       ["When something is important enough, you do it even if the odds are not in your favor.", "Elon Musk"],
-      ["All we have to decide is what to do with the time that is given to us","Gandalf"],
-      ["English Motherf*****, do you speak it!?","Samuel L. Jackson"],
-      ["Why so serious?","Joker"]
-    ]
-}  
+      ["All we have to decide is what to do with the time that is given to us", "Gandalf"],
+      ["English Motherf*****, do you speak it!?", "Samuel L. Jackson"],
+      ["In their last moment, People show you who they're really are", "Joker"],
+      ["What is real? How do you define 'real'? If you're talking about what you can feel, what you can smell, what you can taste and see, then 'real' is simply electrical signals interpreted by your brain.", "Morpheus"],
+      ["Manners maketh man.", "Harry Hart (Kingsman: The Secret Service)"],
+      ["You may lose your faith in us, but never in yourselves.", "Optimus Prime (Transformers)"],
+      ["In time, they will join you in the sun. In time, you will help them accomplish wonders.", "Jor-El (Man of Steel)"],
+      ["They're others ways to see", "Matt Murdock (Daredevil)"],
+      ["People need dramatic examples to shake them out of apathy and I can't do that as Bruce Wayne.", "Bruce Wayne (Batman Begins)"],
+      ["There's a difference between knowing the path and walking the path.", "Morpheus (The Matrix)"],
+      ["Sometimes, the truth isn't good enough. Sometimes people deserve more.", "Batman (The Dark Knight)"],
+      ["I don’t have dreams, I have goals.", "Harvey Specter"],
+      ["Win a no-win situation by rewriting the rules.", "Harvey Specter"],
+      ["I don’t play the odds. I play the man.", "Harvey Specter"],
+      ["You always have a choice.", "Harvey Specter"],
+      ["Life is this. I like this.", "Harvey Specter"],
+      ["There is nothing noble in being superior to your fellow man; true nobility is being superior to your former self.", "Galahad (Kingsman)"],
+      ["The mind is a wonderful thing. It can create, it can destroy.", "Patrick Jane"],
+      ["The truth is not always the same as the majority opinion.", "Patrick Jane"],
+      ["To be a great liar, you must be a great observer.", "Patrick Jane"],
+      ["Sometimes the best way to solve a problem is to ignore it.", "Patrick Jane"],
+      ["The world is full of mysteries. Solving them is what makes life interesting.", "Patrick Jane"],
+      ["Every time you get angry, you lose a little bit of your power.", "Patrick Jane"]
+  ]
+}
