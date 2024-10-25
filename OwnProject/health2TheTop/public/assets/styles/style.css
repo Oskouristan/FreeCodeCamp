@@ -1,0 +1,35 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.dashboard .sidebar {
+  background-color: #4b5bdb;
+  height: 100vh;
+}
+.dashboard .sidebar .nav-link {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.dashboard .sidebar .nav-link:hover {
+  background-color: rgb(50.5, 68.6777777778, 214.1);
+  border-radius: 8px;
+  padding-left: 10px;
+}
+.dashboard .income-section .card, .dashboard .stats-section .card {
+  padding: 20px;
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+.dashboard .income-section h5, .dashboard .stats-section h5 {
+  margin-bottom: 20px;
+}
+.dashboard .circle-chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+/*# sourceMappingURL=style.css.map */

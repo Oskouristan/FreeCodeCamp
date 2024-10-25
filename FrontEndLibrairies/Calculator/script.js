@@ -76,6 +76,9 @@ function calculer(expression) {
 
 function testerCalculs() {
     const tests = [
+
+        
+        { test: "3 + 5 * 6 - 2 / 4", attendu: 32.5 },
         { test: "5+3", attendu: 8 },
         { test: "10-4", attendu: 6 },
         { test: "6*7", attendu: 42 },

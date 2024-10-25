@@ -1,0 +1,50 @@
+@use "sass:color"; // Importation du module de couleur
+
+// Variables pour la couleur
+$primaryColor: #4b5bdb; // Renommé pour éviter la confusion
+$secondaryColor: #f8f9fa;
+$bgColor: #ffffff;
+
+// Style global
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.dashboard {
+  .sidebar {
+    background-color: $primaryColor; // Utilisation de la variable renommée
+    height: 100vh;
+    
+    .nav-link {
+      font-size: 1.1rem;
+      margin-bottom: 20px; 
+      color: #ffffff;
+    
+      &:hover {
+        background-color: color.scale($primaryColor, $lightness: -10%); // Utilisation de la fonction de couleur
+        border-radius: 8px;
+        padding-left: 10px;
+      }
+    }
+  }
+  
+  .income-section, .stats-section {
+    .card {
+      padding: 20px;
+      background-color: $bgColor; // Utilisation de la variable renommée
+      border: none;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    h5 {
+      margin-bottom: 20px;
+    }
+  }
+
+  .circle-chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+  }
+}
