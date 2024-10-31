@@ -90,24 +90,28 @@ body, html {
   background-color: #F5F5F5; /* Couleur au survol */
 }
 
+
+
+
 /* Section des articles de blog */
 .content {
   flex: 1;
   padding: 1rem;
-  margin: 20px;
+  margin: 10px;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Affiche 3 colonnes fixes */
   gap: 20px; /* Espace entre les cartes */
 }
 
 .blog-card {
-  background-color: #f9f9f9;
+  background-color: #F5F5F5; /* Fond gris */
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 100px; /* Assure une taille minimale */
+  padding: 10px;
 }
 
 
@@ -117,17 +121,16 @@ body, html {
 
 .blog-card img {
   width: 100%;
-  height: 50px; /* Ajuster la hauteur pour réduire l'espace pris */
+  height: auto;
+  max-height: 100px;
   object-fit: cover;
 }
 
 .blog-info {
   padding: 1rem;
-  flex: 1;
 }
 
 .blog-info h3 {
-  margin: 0 0 0.5rem 0;
   font-size: 1.2rem;
   color: #333;
 }
@@ -135,29 +138,27 @@ body, html {
 .blog-info p {
   font-size: 0.9rem;
   color: #555;
-  overflow: hidden; /* Masque le texte débordant */
-  text-overflow: ellipsis; /* Ajoute "..." si le texte déborde */
-  display: -webkit-box; /* Pour la gestion du texte multi-lignes */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3; /* Limite le nombre de lignes affichées */
+  -webkit-line-clamp: 3;
 }
 
 .blog-card.double-width {
-  grid-column: span 2; /* S'étend sur deux colonnes */
+  grid-column: span 2;
 }
 
+
 .blog-info button {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
   font-size: 0.9rem;
   color: #007bff;
   background-color: transparent;
   border: 1px solid #007bff;
   border-radius: 4px;
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 
 .blog-info button:hover {
