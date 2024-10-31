@@ -4,13 +4,13 @@ body, html {
   padding: 0;
   font-family: Arial, sans-serif;
   display: flex;
-  flex-direction: column; /* Permet de faire en sorte que le header et le footer soient en haut et en bas */
-  height: 100vh; /* Permet de prendre toute la hauteur de la fenêtre */
+  flex-direction: column; 
+  height: 100vh;
 }
 
 .main-layout {
   display: flex;
-  flex: 1; /* Permet à cette section de prendre le reste de l'espace disponible */
+  flex: 1;
 }
 
 /* Header principal */
@@ -19,18 +19,19 @@ body, html {
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  background-color: #1c1c1e; /* Fond du header (noir comme Apple) */
-  color: #fff; /* Couleur du texte dans le header */
+  background-color: #1c1c1e; 
+  color: #fff;
 }
 
 .header-logo img {
-  height: 160px; /* Hauteur 4 fois plus grande */
-  width: auto;   /* Conserve les proportions */
-  margin-top: -60px; /* Ajuste le logo pour qu’il reste dans l’espace du header */
+  height: 60px;
+  width: auto;   
+  margin-top: -20px;
+  margin-bottom: -27px;
 }
 
 .header-search {
-  position: relative; /* Nécessaire pour positionner correctement la barre de recherche */
+  position: relative; 
 }
 
 .header-search .search-input {
@@ -38,26 +39,25 @@ body, html {
   border-radius: 4px;
   border: none;
   width: 500px;
-  background-color: #2c2c2e; /* Fond de la barre de recherche (moins sombre que le header) */
-  color: #fff; /* Texte en blanc */
+  background-color: #2c2c2e; 
+  color: #fff;
 }
 
 .header-search .search-input::placeholder {
-  color: #b0b0b0; /* Couleur du texte du placeholder */
+  color: #b0b0b0; 
 }
-
 
 .header-icons .icon {
   font-size: 1.2rem;
-  color: #fff; /* Couleur des icônes en blanc */
+  color: #fff;   
   margin-left: 1rem;
 }
 
 /* Barre de navigation verticale */
 .sidebar {
-  width: 60px;
-  background-color: #333;
-  color: #fff;
+  width: 120px; /* Augmentez la largeur de la sidebar (ajustez selon vos besoins) */
+  background-color: #ffffff; /* Fond blanc */
+  color: #1c1c1e; /* Couleur du texte en noir */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,7 +78,7 @@ body, html {
 }
 
 .sidebar li a {
-  color: #fff;
+  color: #1c1c1e; /* Texte en noir */
   text-decoration: none;
   display: block;
   width: 100%;
@@ -87,16 +87,17 @@ body, html {
 }
 
 .sidebar li a:hover {
-  background-color: #444; /* Couleur au survol */
+  background-color: #F5F5F5; /* Couleur au survol */
 }
 
 /* Section des articles de blog */
 .content {
   flex: 1;
   padding: 1rem;
+  margin: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr); /* Affiche 3 colonnes fixes */
+  gap: 20px; /* Espace entre les cartes */
 }
 
 .blog-card {
@@ -106,16 +107,23 @@ body, html {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  height: 100%;
+}
+
+
+.blog-card:nth-child(3n) { /* Par exemple, ajuster le 3ème article sur une ligne */
+  grid-column: span 2; /* Prendre la place de 2 colonnes */
 }
 
 .blog-card img {
   width: 100%;
-  height: 180px;
+  height: 50px; /* Ajuster la hauteur pour réduire l'espace pris */
   object-fit: cover;
 }
 
 .blog-info {
   padding: 1rem;
+  flex: 1;
 }
 
 .blog-info h3 {
@@ -127,6 +135,15 @@ body, html {
 .blog-info p {
   font-size: 0.9rem;
   color: #555;
+  overflow: hidden; /* Masque le texte débordant */
+  text-overflow: ellipsis; /* Ajoute "..." si le texte déborde */
+  display: -webkit-box; /* Pour la gestion du texte multi-lignes */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* Limite le nombre de lignes affichées */
+}
+
+.blog-card.double-width {
+  grid-column: span 2; /* S'étend sur deux colonnes */
 }
 
 .blog-info button {

@@ -27,55 +27,14 @@
 
     <!-- Section des articles de blog -->
     <main class="content">
-      <div class="blog-card">
-        <img src="image1.jpg" alt="Image Blog">
-        <div class="blog-info">
-          <h3>AI</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare lorem vitae felis.</p>
-          <button>Get Started</button>
-        </div>
-      </div>
-      <div class="blog-card">
-        <img src="image2.jpg" alt="Image Blog">
-        <div class="blog-info">
-          <h3>Infrastructure</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare lorem vitae felis.</p>
-          <button>Get Started</button>
-        </div>
-      </div>
+      <!-- Les cartes de blog seront ajoutées dynamiquement ici par le script JavaScript -->
     </main>
   </div>
 
   <div id="footer"></div>
 
-  <!-- Script pour charger le header et le footer -->
-  <script>
-    // Chargement du header
-    fetch('header.html')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Erreur lors du chargement du header');
-        }
-        return response.text();
-      })
-      .then(data => {
-        document.getElementById('header').innerHTML = data;
-      })()
-      .catch(error => console.error('Erreur lors du chargement du header:', error));
-
-    // Chargement du footer
-    fetch('footer.html')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Erreur lors du chargement du footer');
-        }
-        return response.text();
-      })
-      .then(data => {
-        document.getElementById('footer').innerHTML = data;
-      })
-      .catch(error => console.error('Erreur lors du chargement du footer:', error));
-  </script>
+  <script src="assets/scripts/headerAndFooter.js"></script>
+  <script src="assets/scripts/blog.js"></script> <!-- Inclus le script pour générer les articles de blog -->
 
 </body>
 </html>

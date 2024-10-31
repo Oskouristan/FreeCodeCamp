@@ -1,35 +1,168 @@
-body {
-  font-family: "Roboto", sans-serif;
-}
-
-.dashboard .sidebar {
-  background-color: #4b5bdb;
+@charset "UTF-8";
+/* Styles globaux */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
   height: 100vh;
 }
-.dashboard .sidebar .nav-link {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  color: #ffffff;
-}
-.dashboard .sidebar .nav-link:hover {
-  background-color: rgb(50.5, 68.6777777778, 214.1);
-  border-radius: 8px;
-  padding-left: 10px;
-}
-.dashboard .income-section .card, .dashboard .stats-section .card {
-  padding: 20px;
-  background-color: #ffffff;
-  border: none;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-}
-.dashboard .income-section h5, .dashboard .stats-section h5 {
-  margin-bottom: 20px;
-}
-.dashboard .circle-chart {
+
+.main-layout {
   display: flex;
-  justify-content: center;
+  flex: 1;
+}
+
+/* Header principal */
+.health-tracker-header {
+  display: flex;
   align-items: center;
-  height: 200px;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #1c1c1e;
+  color: #fff;
+}
+
+.header-logo img {
+  height: 60px;
+  width: auto;
+  margin-top: -20px;
+  margin-bottom: -27px;
+}
+
+.header-search {
+  position: relative;
+}
+
+.header-search .search-input {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: none;
+  width: 500px;
+  background-color: #2c2c2e;
+  color: #fff;
+}
+
+.header-search .search-input::placeholder {
+  color: #b0b0b0;
+}
+
+.header-icons .icon {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-left: 1rem;
+}
+
+/* Barre de navigation verticale */
+.sidebar {
+  width: 120px; /* Augmentez la largeur de la sidebar (ajustez selon vos besoins) */
+  background-color: #ffffff; /* Fond blanc */
+  color: #1c1c1e; /* Couleur du texte en noir */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sidebar li {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.sidebar li a {
+  color: #1c1c1e; /* Texte en noir */
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.sidebar li a:hover {
+  background-color: #F5F5F5; /* Couleur au survol */
+}
+
+/* Section des articles de blog */
+.content {
+  flex: 1;
+  padding: 1rem;
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Affiche 3 colonnes fixes */
+  gap: 20px; /* Espace entre les cartes */
+}
+
+.blog-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.blog-card:nth-child(3n) { /* Par exemple, ajuster le 3ème article sur une ligne */
+  grid-column: span 2; /* Prendre la place de 2 colonnes */
+}
+
+.blog-card img {
+  width: 100%;
+  height: 50px; /* Ajuster la hauteur pour réduire l'espace pris */
+  object-fit: cover;
+}
+
+.blog-info {
+  padding: 1rem;
+  flex: 1;
+}
+
+.blog-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.blog-info p {
+  font-size: 0.9rem;
+  color: #555;
+  overflow: hidden; /* Masque le texte débordant */
+  text-overflow: ellipsis; /* Ajoute "..." si le texte déborde */
+  display: -webkit-box; /* Pour la gestion du texte multi-lignes */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* Limite le nombre de lignes affichées */
+}
+
+.blog-card.double-width {
+  grid-column: span 2; /* S'étend sur deux colonnes */
+}
+
+.blog-info button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: #007bff;
+  background-color: transparent;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.blog-info button:hover {
+  background-color: #007bff;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
