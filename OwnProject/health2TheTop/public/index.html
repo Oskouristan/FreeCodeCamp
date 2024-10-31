@@ -1,113 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/styles/style.css">
+  <title>Health Tracker - Blog</title>
+  <link rel="stylesheet" href="assets/styles/style.scss">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css">
 </head>
 <body>
-  <div class="container-fluid dashboard">
-    <div class="row">
-      <nav class="col-md-2 d-none d-md-block bg-primary sidebar">
-        <div class="sidebar-sticky">
-          <div class="logo my-4">
-            <h2 class="text-white text-center">InTrust</h2>
-          </div>
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link active text-white" href="#">
-                <i class="fas fa-home"></i>
-                Home
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">
-                <i class="fas fa-chart-bar"></i>
-                Stats
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">
-                <i class="fas fa-tasks"></i>
-                Actions
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">
-                <i class="fas fa-cog"></i>
-                Settings
-              </a>
-            </li>
-          </ul>
+
+  <div id="header"></div>
+
+  <div class="main-layout">
+    <!-- Barre de navigation verticale -->
+    <aside class="sidebar">
+      <ul>
+        <li><a href="#"><i class="bi bi-house"></i> Home</a></li>
+        <li><a href="#"><i class="bi bi-cloud"></i> Cloud</a></li>
+        <li><a href="#"><i class="bi bi-stack"></i> Database</a></li>
+        <li><a href="#"><i class="bi bi-code-slash"></i> Development</a></li>
+        <li><a href="#"><i class="bi bi-people"></i> Community</a></li>
+        <li><a href="#"><i class="bi bi-arrow-repeat"></i> Updates</a></li>
+        <li><a href="#"><i class="bi bi-plus"></i> More</a></li>
+      </ul>
+    </aside>
+
+    <!-- Section des articles de blog -->
+    <main class="content">
+      <div class="blog-card">
+        <img src="image1.jpg" alt="Image Blog">
+        <div class="blog-info">
+          <h3>AI</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare lorem vitae felis.</p>
+          <button>Get Started</button>
         </div>
-      </nav>
-
-      <!-- Main Content -->
-      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          <h1 class="h2">Dashboard</h1>
-          <div class="btn-toolbar mb-2 mb-md-0">
-            <div class="btn-group mr-2">
-              <button type="button" class="btn btn-sm btn-outline-secondary">Contacts</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Support</button>
-            </div>
-          </div>
+      </div>
+      <div class="blog-card">
+        <img src="image2.jpg" alt="Image Blog">
+        <div class="blog-info">
+          <h3>Infrastructure</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare lorem vitae felis.</p>
+          <button>Get Started</button>
         </div>
-
-        <!-- Statistics Section -->
-        <section class="income-section mb-4">
-          <h2>Your Income</h2>
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card shadow-sm p-3 mb-5 bg-white rounded">
-                <h4>Deposit Income</h4>
-                <p class="display-4">$1262</p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card shadow-sm p-3 mb-5 bg-white rounded">
-                <h4>Monthly Income</h4>
-                <p class="display-4">$11243</p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card shadow-sm p-3 mb-5 bg-white rounded">
-                <h4>Daily Income</h4>
-                <p class="display-4">$161</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Statistics Graphs -->
-        <section class="stats-section">
-          <div class="row">
-            <div class="col-md-8">
-              <div class="card">
-                <h5>Statistics</h5>
-                <canvas id="statsChart"></canvas> <!-- Canvas for Graph -->
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card">
-                <h5>Category Expenses</h5>
-                <div class="circle-chart">
-                  <!-- Placeholder for Pie Chart -->
-                  <canvas id="pieChart"></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
+      </div>
+    </main>
   </div>
 
-  <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <script src="scripts.js"></script>
+  <div id="footer"></div>
+
+  <!-- Script pour charger le header et le footer -->
+  <script>
+    // Chargement du header
+    fetch('header.html')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Erreur lors du chargement du header');
+        }
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      })()
+      .catch(error => console.error('Erreur lors du chargement du header:', error));
+
+    // Chargement du footer
+    fetch('footer.html')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Erreur lors du chargement du footer');
+        }
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      })
+      .catch(error => console.error('Erreur lors du chargement du footer:', error));
+  </script>
+
 </body>
 </html>

@@ -1,50 +1,149 @@
-@use "sass:color"; // Importation du module de couleur
-
-// Variables pour la couleur
-$primaryColor: #4b5bdb; // Renommé pour éviter la confusion
-$secondaryColor: #f8f9fa;
-$bgColor: #ffffff;
-
-// Style global
-body {
-  font-family: 'Roboto', sans-serif;
+/* Styles globaux */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column; /* Permet de faire en sorte que le header et le footer soient en haut et en bas */
+  height: 100vh; /* Permet de prendre toute la hauteur de la fenêtre */
 }
 
-.dashboard {
-  .sidebar {
-    background-color: $primaryColor; // Utilisation de la variable renommée
-    height: 100vh;
-    
-    .nav-link {
-      font-size: 1.1rem;
-      margin-bottom: 20px; 
-      color: #ffffff;
-    
-      &:hover {
-        background-color: color.scale($primaryColor, $lightness: -10%); // Utilisation de la fonction de couleur
-        border-radius: 8px;
-        padding-left: 10px;
-      }
-    }
-  }
-  
-  .income-section, .stats-section {
-    .card {
-      padding: 20px;
-      background-color: $bgColor; // Utilisation de la variable renommée
-      border: none;
-      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    }
-    
-    h5 {
-      margin-bottom: 20px;
-    }
-  }
+.main-layout {
+  display: flex;
+  flex: 1; /* Permet à cette section de prendre le reste de l'espace disponible */
+}
 
-  .circle-chart {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-  }
+/* Header principal */
+.health-tracker-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #1c1c1e; /* Fond du header (noir comme Apple) */
+  color: #fff; /* Couleur du texte dans le header */
+}
+
+.header-logo img {
+  height: 160px; /* Hauteur 4 fois plus grande */
+  width: auto;   /* Conserve les proportions */
+  margin-top: -60px; /* Ajuste le logo pour qu’il reste dans l’espace du header */
+}
+
+.header-search {
+  position: relative; /* Nécessaire pour positionner correctement la barre de recherche */
+}
+
+.header-search .search-input {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: none;
+  width: 500px;
+  background-color: #2c2c2e; /* Fond de la barre de recherche (moins sombre que le header) */
+  color: #fff; /* Texte en blanc */
+}
+
+.header-search .search-input::placeholder {
+  color: #b0b0b0; /* Couleur du texte du placeholder */
+}
+
+
+.header-icons .icon {
+  font-size: 1.2rem;
+  color: #fff; /* Couleur des icônes en blanc */
+  margin-left: 1rem;
+}
+
+/* Barre de navigation verticale */
+.sidebar {
+  width: 60px;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sidebar li {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.sidebar li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.sidebar li a:hover {
+  background-color: #444; /* Couleur au survol */
+}
+
+/* Section des articles de blog */
+.content {
+  flex: 1;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.blog-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.blog-info {
+  padding: 1rem;
+}
+
+.blog-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.blog-info p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.blog-info button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: #007bff;
+  background-color: transparent;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.blog-info button:hover {
+  background-color: #007bff;
+  color: #fff;
 }
