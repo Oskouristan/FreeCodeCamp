@@ -23,13 +23,10 @@ function helloWorld() {
 
 **Texte en gras**`;
 
-// Affecter le contenu par défaut à l'éditeur
 editor.value = defaultMarkdown; 
 
-// Rendre le contenu par défaut dans l'aperçu
 preview.innerHTML = marked(defaultMarkdown); 
 
-// Mettre à jour l'aperçu lorsque l'utilisateur tape dans l'éditeur
 editor.addEventListener('input', function() {
     preview.innerHTML = marked(editor.value);
 });
