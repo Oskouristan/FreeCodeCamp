@@ -12,40 +12,20 @@
             border-radius: 5px; /* Coins arrondis */
             padding: 15px; /* Espacement interne */
             margin-bottom: 20px; /* Espacement entre l'éditeur et l'aperçu */
+            overflow-y: auto; /* Ajout de défilement si nécessaire */
         }
     </style>
 </head>
 <body class="d-flex flex-column justify-content-center align-items-center vh-100 text-light bg-dark bg-opacity-50">
     <div id="app" class="text-center bg-dark p-4 rounded mx-2" style="max-width: 600px;">
         <p class="h6">MarkDownPreviewer</p>
-        <textarea id="editor" class="form-control" placeholder="Écrivez votre Markdown ici...">
-# Titre Principal (H1)
-## Sous-titre (H2)
-[Visitez FreeCodeCamp](https://www.freecodecamp.org)
-Voici du code en ligne : \`console.log('Hello World');\`
-
-\`\`\`
-function helloWorld() {
-    console.log('Hello World');
-}
-\`\`\`
-
-- Élément de liste :
-  - Item 1
-  - Item 2
-
-> Ceci est un bloc de citation.
-
-![Image de démonstration](https://via.placeholder.com/150) <!-- Élément d'image ajouté -->
-
-**Texte en gras**
-        </textarea>
-        <div id="preview" class="mt-4 text-dark"></div>
+        <textarea id="editor" class="form-control" placeholder="Écrivez votre Markdown ici..."></textarea>
+        <div id="preview" class="mt-4 text-dark border p-3"></div>
         <footer class="mt-4">
             <p>&copy; 2024 DariusWebServices. Tous droits réservés.</p>
         </footer>
     </div>
-    <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.1.3/marked.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

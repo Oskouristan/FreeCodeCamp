@@ -90,9 +90,6 @@ body, html {
   background-color: #F5F5F5; /* Couleur au survol */
 }
 
-
-
-
 /* Section des articles de blog */
 .content {
   flex: 1;
@@ -110,24 +107,22 @@ body, html {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  min-height: 100px; /* Assure une taille minimale */
+  max-height: 200px; /* Assure une taille minimale */
   padding: 10px;
 }
 
-
-.blog-card:nth-child(3n) { /* Par exemple, ajuster le 3ème article sur une ligne */
-  grid-column: span 2; /* Prendre la place de 2 colonnes */
-}
-
-.blog-card img {
-  width: 100%;
-  height: auto;
-  max-height: 100px;
-  object-fit: cover;
+/* Styles spécifiques pour les cartes qui occupent deux colonnes */
+.blog-card.double-width {
+  grid-column: span 2;
+  background-size: cover; /* Assurez-vous que l'image s'ajuste correctement */
 }
 
 .blog-info {
-  padding: 1rem;
+  //display: flex;
+  flex-direction: column; /* Aligne les éléments en colonne */
+  justify-content: space-between; /* Espace équidistant entre les éléments */
+  height: 100%; /* Permet au conteneur de prendre toute la hauteur du bloc */
+  padding: 1rem; /* Ajoute un peu de padding */
 }
 
 .blog-info h3 {
@@ -145,11 +140,6 @@ body, html {
   -webkit-line-clamp: 3;
 }
 
-.blog-card.double-width {
-  grid-column: span 2;
-}
-
-
 .blog-info button {
   margin-top: 0.5rem;
   padding: 0.4rem 0.8rem;
@@ -159,6 +149,7 @@ body, html {
   border: 1px solid #007bff;
   border-radius: 4px;
   cursor: pointer;
+  align-self: flex-start;
 }
 
 .blog-info button:hover {

@@ -20,6 +20,6 @@ fetch('footer.html')
     return response.text();
   })
   .then(data => {
-    document.getElementById('footer').innerHTML = data;
+    //document.getElementById('footer').innerHTML = data;
   })
   .catch(error => console.error('Erreur lors du chargement du footer:', error));
