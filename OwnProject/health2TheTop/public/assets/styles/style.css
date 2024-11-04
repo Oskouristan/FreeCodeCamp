@@ -157,4 +157,30 @@ body, html {
   color: #fff;
 }
 
+#article-container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.article-content {
+  line-height: 1.8;
+  color: #555;
+}
+
+.article-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
 /*# sourceMappingURL=style.css.map */

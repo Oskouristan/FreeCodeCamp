@@ -156,3 +156,31 @@ body, html {
   background-color: #007bff;
   color: #fff;
 }
+
+// article.css
+
+#article-container {
+  background: white; // Fond blanc
+  border-radius: 10px; // Coins arrondis
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); // Ombre
+}
+
+h1 {
+  font-size: 2rem; // Taille du titre
+  color: #333; // Couleur du titre
+  margin-bottom: 1rem; // Espacement sous le titre
+}
+
+.article-content {
+  line-height: 1.8; // Améliorer la lisibilité
+  color: #555; // Couleur du texte
+}
+
+.article-image {
+  display: block; // Affichage en bloc
+  max-width: 100%; // Assurez-vous que l'image ne dépasse pas le conteneur
+  height: auto; // Conserver le ratio d'aspect
+  margin: 20px auto; // Marge au-dessus et en dessous
+  border-radius: 8px; // Coins arrondis
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Ombre pour l'image
+}

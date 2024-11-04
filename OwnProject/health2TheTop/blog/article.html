@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="../node_modules/marked/marked.min.js"></script> <!-- Chemin vers marked -->
-</head>
-<body>
-    <div id="article-container">
-        <!-- Contenu de l'article sera ajouté ici par le script JavaScript -->
-    </div>
-    <script src="article.js"></script> <!-- Script pour charger l'article -->
-</body>
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Article - {{titre}}</title> <!-- Remplacez {{titre}} par le titre de l'article dynamique -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        
+        <link rel="stylesheet" href="../public/assets/styles/style.scss">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.1.3/marked.min.js"></script>
+    </head>
+
+    <body>
+        <div id="header"></div>
+
+        <div class="container my-5">
+            <div id="article-container" class="text-center bg-light p-4 rounded">
+                <!-- Contenu de l'article sera ajouté ici par le script JavaScript -->
+            </div>
+        </div>
+
+        <div id="footer"></div>
+
+        <script src="article.js"></script> <!-- Script pour charger l'article -->
+        <script src="scripts/headerAndFooter.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+
 </html>
